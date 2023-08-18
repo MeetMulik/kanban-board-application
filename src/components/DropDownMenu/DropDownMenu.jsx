@@ -15,6 +15,7 @@ const DropDownMenu = () => {
       type: actionTypes.SET_SORTING,
       sorting: e.target.value,
     });
+    localStorage.setItem("sorting", e.target.value);
   };
 
   const handleGroupingChange = (e) => {
@@ -23,6 +24,7 @@ const DropDownMenu = () => {
       type: actionTypes.SET_GROUPING,
       grouping: e.target.value,
     });
+    localStorage.setItem("grouping", e.target.value);
   };
 
   return (

@@ -12,9 +12,13 @@ const App = () => {
   const [ticketsarr, setTickets] = useState([]);
   const [usersarr, setUsers] = useState([]);
 
-  const [dropdown, setDropdown] = useState(true);
+  const [dropdown, setDropdown] = useState(false);
 
   const [state, dispatch] = useStateValue();
+
+  const toggleDropdown = (e) => {
+    setDropdown(!dropdown);
+  };
 
   const fetchData = async () => {
     const response = await fetch(
@@ -54,7 +58,7 @@ const App = () => {
       const groupTickets = grouped[groupKey].slice();
       sortedGroups[groupKey] = groupTickets.sort((a, b) => {
         if (state.sorting === "priority") {
-          return b.priority - a.priority;
+          return a.priority - b.priority;
         } else if (state.sorting === "title") {
           return a.title.localeCompare(b.title);
         }
@@ -65,10 +69,6 @@ const App = () => {
   };
 
   const sortedGroupedItems = sortingItems(groupedItems);
-
-  const toggleDropdown = (e) => {
-    setDropdown(!dropdown);
-  };
 
   return (
     <div>
