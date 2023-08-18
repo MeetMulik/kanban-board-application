@@ -1,16 +1,28 @@
 import React, { useState } from "react";
 import "./DropDownMenu.css";
+import { useStateValue } from "../../../src/context/StateProvider";
+import { actionTypes } from "../../context/reducer";
 
 const DropDownMenu = () => {
   const [grouping, setGrouping] = useState("status");
   const [sorting, setSorting] = useState("priority");
 
+  const [state, dispatch] = useStateValue();
+
   const handleSortingChange = (e) => {
     setSorting(e.target.value);
+    dispatch({
+      type: actionTypes.SET_SORTING,
+      sorting: e.target.value,
+    });
   };
 
   const handleGroupingChange = (e) => {
     setGrouping(e.target.value);
+    dispatch({
+      type: actionTypes.SET_GROUPING,
+      grouping: e.target.value,
+    });
   };
 
   return (
@@ -22,11 +34,11 @@ const DropDownMenu = () => {
               <label htmlFor="status-select">Grouping: </label>
               <select
                 id="status-select"
-                value={grouping}
+                value={state.grouping}
                 onChange={handleGroupingChange}
                 className="select-box"
               >
-                <option value="user">User</option>
+                <option value="userId">User</option>
                 <option value="status">Status</option>
                 <option value="priority">Priority</option>
               </select>
@@ -39,7 +51,7 @@ const DropDownMenu = () => {
               <label htmlFor="option-select">Sorting: </label>
               <select
                 id="option-select"
-                value={sorting}
+                value={state.sorting}
                 onChange={handleSortingChange}
                 className="select-box"
               >

@@ -1,39 +1,38 @@
-.navbar{
+.navbar {
   background: white;
   display: flex;
 }
 
-.dropbox{
+.dropbox {
   margin-left: 50px;
 }
 
-.body{
-  background-color: #ECECEC;
-  height: 90vh;
+.body {
+  background-color: #ececec;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 3px;
+  flex-wrap: wrap;
 }
 
-#displayt{
+#displayt {
   font-size: 1rem;
   font-weight: 600;
   margin: 4px;
 }
 
-.displayalign{
+.displayalign {
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   padding: 2px 3px;
   margin: 10px;
-  box-shadow:
-  0.5px 0px 1.5px rgba(0, 0, 0, 0.078),
-  1.2px 0px 3.7px rgba(0, 0, 0, 0.111),
-  2.5px 0px 7.6px rgba(0, 0, 0, 0.139),
-  5.1px 0px 15.7px rgba(0, 0, 0, 0.172),
-  14px 0px 43px rgba(0, 0, 0, 0.25)
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.dicon{
+.dicon {
   font-size: 1.4rem;
   margin-top: 10px;
 }

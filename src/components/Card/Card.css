@@ -1,0 +1,89 @@
+.card {
+  padding: 20px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  width: 475px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.card-mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+#ticket-id {
+  color: grey;
+}
+
+#title {
+  font-weight: 700;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 0;
+}
+
+#tag {
+  padding: 4px 8px;
+  background-color: #ececec;
+  color: #333;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#person-id {
+  font-size: 1.2rem;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 0;
+}
+
+#priority-icon {
+  font-size: 2rem;
+}
+
+.priority-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-header {
+  display: flex;
+  margin-right: 2px;
+  align-items: start;
+  justify-content: center;
+}

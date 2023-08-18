@@ -1,0 +1,44 @@
+.column {
+  margin-top: 40px;
+}
+
+#col-title {
+  font-weight: 400;
+}
+
+#tickets-size {
+  margin-left: 0.8rem;
+  font-size: large;
+  color: grey;
+}
+
+#header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#add-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.column-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
